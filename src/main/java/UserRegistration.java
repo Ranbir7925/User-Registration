@@ -6,10 +6,17 @@ public class UserRegistration
     private static final String NAME_PATTERN = "^[A-Z][A-Za-z0-9]{2,}$";
 
     //PATTERN TO VALIDATE FIRST NAME
-    public boolean validateFirstName(String firstname)
+    public boolean validateFirstName(String firstName)
     {
         Pattern pattern = Pattern.compile(NAME_PATTERN);
-        return pattern.matcher(firstname).matches();
+        return pattern.matcher(firstName).matches();
 
+    }
+
+    //PATTERN TO VALIDATE LAST NAME
+    public boolean validateLastName(String lastName)
+    {
+        Pattern pattern = Pattern.compile(NAME_PATTERN);
+        return pattern.matcher(lastName).matches();
     }
 }
