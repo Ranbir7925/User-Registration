@@ -3,8 +3,10 @@ import org.junit.Test;
 
 public class UserRegistrationTest
 {
+    //TEST CASES FOR FIRST NAME
+
     @Test
-    public void givenValidfirstNameReturnTrue()
+    public void givenValidFirstNameReturnsTrue()
     {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validateFirstName("Ranbir");
@@ -12,7 +14,7 @@ public class UserRegistrationTest
     }
 
     @Test
-    public void givenFirstNameStartWithSmallerCaseReturnFalse()
+    public void givenFirstNameStartWithSmallerCaseReturnsFalse()
     {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validateFirstName("ranbir");
@@ -20,10 +22,35 @@ public class UserRegistrationTest
     }
 
     @Test
-    public void givenFirstnameHasTwoCharacterReturnFalse()
+    public void givenFirstnameHasTwoCharacterReturnsFalse()
     {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validateFirstName("An");
+        Assert.assertFalse(result);
+    }
+
+    //TEST CASES FOR LAST NAME
+
+    @Test
+    public void givenValidLastNameReturnsTrue()
+    {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validateLastName("Singh");
+    }
+
+    @Test
+    public void givenLastNameStartWithSmallerCaseReturnsFalse()
+    {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validateLastName("singh");
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenLastNameHasTwoCharacterReturnFalse()
+    {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validateLastName("Si");
         Assert.assertFalse(result);
     }
 }
