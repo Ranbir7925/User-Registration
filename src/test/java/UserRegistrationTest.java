@@ -4,7 +4,6 @@ import org.junit.Test;
 public class UserRegistrationTest
 {
     //TEST CASES FOR FIRST NAME
-
     @Test
     public void givenValidFirstNameReturnsTrue()
     {
@@ -29,8 +28,8 @@ public class UserRegistrationTest
         Assert.assertFalse(result);
     }
 
-    //TEST CASES FOR LAST NAME
 
+    //TEST CASES FOR LAST NAME
     @Test
     public void givenValidLastNameReturnsTrue()
     {
@@ -51,6 +50,33 @@ public class UserRegistrationTest
     {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validateLastName("Si");
+        Assert.assertFalse(result);
+    }
+
+
+    //TEST CASES FOR LAST NAME
+    @Test
+    public void givenMobileNumberInPreDefinedFormatReturnsTrue()
+    {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validateMobileNumber("92 9876543210");
+        Assert.assertTrue(result);
+
+    }
+
+    @Test
+    public void givenMobileNumberWithNineDigitReturnsFalse()
+    {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validateMobileNumber("91 123456789");
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenMobileNumberWithoutSpaceReturnsFalse()
+    {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validateMobileNumber("919874563210");
         Assert.assertFalse(result);
     }
 }
