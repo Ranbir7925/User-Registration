@@ -35,6 +35,7 @@ public class UserRegistrationTest
     {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validateLastName("Singh");
+        Assert.assertTrue(result);
     }
 
     @Test
