@@ -10,8 +10,7 @@ public class UserRegistration
     private static final String NAME_PATTERN = "^[A-Z][A-Za-z0-9]{2,}$";
     private static final String EMAIL_PATTERN = "^[0-9a-zA-Z]+([.+-]?[0-9a-zA-z])*[@][a-zA-Z0-9]+([.][a-zA-Z]{2,}){1,2}$";
     private static final String MOBILE_NO_PATTERN = "^[0-9]{2}[ ][0-9]{10}$";
-    private static final String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-z]?)(?=.*[A-Z]).{8,})$";
-
+    private static final String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-z]?)(?=.*[A-Z])(?=.*[@#$%]){1}.{8,})$";
     /**
      * METHOD TO VALIDATE FIRST NAME
      * @param firstName takes First Name for validation
