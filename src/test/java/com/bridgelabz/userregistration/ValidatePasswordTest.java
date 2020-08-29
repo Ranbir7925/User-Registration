@@ -1,4 +1,5 @@
-import com.bridgelabz.userregistration.UserRegistration;
+package com.bridgelabz.userregistration;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,6 +8,9 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
+/**
+ * TEST FOR PASSWORD VALIDATING
+ */
 @RunWith(Parameterized.class)
 public class ValidatePasswordTest
 {
