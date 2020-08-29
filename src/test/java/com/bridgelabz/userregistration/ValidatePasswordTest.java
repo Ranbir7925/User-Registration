@@ -39,7 +39,9 @@ public class ValidatePasswordTest
                         {"Ranbir45", true},
                         {"Ranbir", false},
                         {"ranbir4566", false},
-                        {"ranbir", false}
+                        {"ranbir", false},
+                        {"Ranbirsingh", false},
+                        {"123456789",false}
                 };
         return Arrays.asList(data);
     }
