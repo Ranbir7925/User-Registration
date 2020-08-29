@@ -1,4 +1,5 @@
-import com.bridgelabz.userregistration.UserRegistration;
+package com.bridgelabz.userregistration;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -71,23 +72,6 @@ public class UserRegistrationTest {
     @Test
     public void givenMobileNumber_WhenWithoutSpace_ShouldReturnFalse() {
         boolean result = userRegistration.validateMobileNumber("919874563210");
-        Assert.assertFalse(result);
-    }
-
-    /**
-     * TEST CASES FOR PASSWORD
-     */
-    @Test
-    public void givenPassword_WhenWithMinimumEightCharacters_ShouldReturnTrue()
-    {
-        boolean result = userRegistration.validPassword("qwer5478");
-        Assert.assertTrue(result);
-    }
-
-    @Test
-    public void givenPassword_WhenWithLessThanEightCharacters_ShouldReturnFalse()
-    {
-        boolean result = userRegistration.validPassword("qwe123");
         Assert.assertFalse(result);
     }
 }
