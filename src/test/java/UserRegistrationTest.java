@@ -11,76 +11,81 @@ public class UserRegistrationTest {
          userRegistration = new UserRegistration();
     }
 
-    //TEST CASES FOR FIRST NAME
+    /**
+     * TEST CASES FOR FIRST NAME
+     */
     @Test
-    public void givenValid_FirstName_ReturnsTrue() {
+    public void givenFirstName_WhenProper_ShouldReturnTrue() {
         boolean result = userRegistration.validateFirstName("Ranbir");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void givenFirstNameStartWithSmallerCaseReturnsFalse() {
+    public void givenFirstName_WhenSmallerCase_ShouldReturnFalse() {
         boolean result = userRegistration.validateFirstName("ranbir");
         Assert.assertFalse(result);
     }
 
     @Test
-    public void givenFirstnameHasTwoCharacterReturnsFalse() {
+    public void givenFirstName_WhenHasTwoCharacter_ShouldReturnFalse() {
         boolean result = userRegistration.validateFirstName("An");
         Assert.assertFalse(result);
     }
 
-
-    //TEST CASES FOR LAST NAME
+    /**
+     * TEST CASES FOR LAST NAME
+     */
     @Test
-    public void givenValidLastNameReturnsTrue() {
+    public void givenLastName_WhenProper_ShouldReturnTrue() {
         boolean result = userRegistration.validateLastName("Singh");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void givenLastNameStartWithSmallerCaseReturnsFalse() {
+    public void givenLastName_WhenSmallerCase_ShouldReturnFalse() {
         boolean result = userRegistration.validateLastName("singh");
         Assert.assertFalse(result);
     }
 
     @Test
-    public void givenLastNameHasTwoCharacterReturnFalse() {
+    public void givenLastName_WhenHasTwoCharacter_ShouldReturnFalse() {
         boolean result = userRegistration.validateLastName("Si");
         Assert.assertFalse(result);
     }
 
-
-    //TEST CASES FOR MOBILE NUMBER
+    /**
+     * TEST CASES FOR MOBILE NUMBER
+     */
     @Test
-    public void givenMobileNumberInPreDefinedFormatReturnsTrue() {
+    public void givenMobileNumber_WhenValid_ShouldReturnTrue() {
         boolean result = userRegistration.validateMobileNumber("92 9876543210");
         Assert.assertTrue(result);
-
     }
 
     @Test
-    public void givenMobileNumberWithNineDigitReturnsFalse() {
+    public void givenMobileNumber_WhenNineDigits_ShouldReturnFalse() {
         boolean result = userRegistration.validateMobileNumber("91 123456789");
         Assert.assertFalse(result);
     }
 
     @Test
-    public void givenMobileNumberWithoutSpaceReturnsFalse() {
+    public void givenMobileNumber_WhenWithoutSpace_ShouldReturnFalse() {
         boolean result = userRegistration.validateMobileNumber("919874563210");
         Assert.assertFalse(result);
     }
 
-    //TEST CASES FOR PASSWORD
+    /**
+     * TEST CASES FOR PASSWORD
+     */
     @Test
-    public void givenPasswordWithMinimumEightCharacterReturnTrue()
+    public void givenPassword_WhenWithMinimumEightCharacters_ShouldReturnTrue()
     {
         boolean result = userRegistration.validPassword("qwer5478");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void givenPasswordWithLessThanEightCharacterReturnFalse()
+    public void givenPassword_WhenWithLessThanEightCharacters_ShouldReturnFalse()
     {
         boolean result = userRegistration.validPassword("qwe123");
         Assert.assertFalse(result);

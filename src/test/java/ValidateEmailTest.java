@@ -1,3 +1,4 @@
+import com.bridgelabz.userregistration.UserRegistration;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +21,7 @@ public class ValidateEmailTest
     }
 
     @Test
-    public void givenValidAndInvalidEmailIdShouldReturnAsPerResult()
+    public void givenEmail_WhenValid_ShouldReturnTrue()
     {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validateEmail(this.emailIdForTest);
